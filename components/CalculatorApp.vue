@@ -8,18 +8,128 @@
       readonly
     ></v-text-field>
     <div class="calculator__button">
-      <div
-        v-for="row in 3"
-        :key="row"
-      >
-        <v-btn
-          v-for="column in 3"
-          :key="row + column"
-          depressed
+      <v-row no-gutters>
+        <v-col
+          v-for="n in 3"
+          :key="n"
+          :cols="3"
         >
-          {{ 3 * (3-row) + column }}
-        </v-btn>
-      </div>
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            {{ n + 6 }}
+          </v-btn>
+        </v-col>
+        <v-col
+          :cols="3"
+        >
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            x
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row no-gutters>
+        <v-col
+          v-for="n in 3"
+          :key="n"
+          :cols="3"
+        >
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            {{ n + 3 }}
+          </v-btn>
+        </v-col>
+        <v-col
+          :cols="3"
+        >
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            -
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row no-gutters>
+        <v-col
+          v-for="n in 3"
+          :key="n"
+          :cols="3"
+        >
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            {{ n }}
+          </v-btn>
+        </v-col>
+        <v-col
+          :cols="3"
+        >
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            +
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row no-gutters>
+        <v-col
+          :cols="6"
+        >
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            0
+          </v-btn>
+        </v-col>
+        <v-col
+          :cols="3"
+        >
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            C
+          </v-btn>
+        </v-col>
+        <v-col
+          :cols="3"
+        >
+          <v-btn
+            depressed
+            block
+            outlined
+            tile
+          >
+            =
+          </v-btn>
+        </v-col>
+      </v-row>
     </div>
   </div>
 </template>
@@ -46,5 +156,7 @@ export default {
 
 .calculator__button {
   /* background: blue; */
+  margin: 0 auto;
+  width: 200px;
 }
 </style>
