@@ -8,47 +8,23 @@
       readonly
     ></v-text-field>
     <div class="calculator__button">
-      <div>
-        <v-btn depressed>
-          7
-        </v-btn>
-        <v-btn depressed>
-          8
-        </v-btn>
-        <v-btn depressed>
-          9
-        </v-btn>
-      </div>
-      <div>
-        <v-btn depressed>
-          4
-        </v-btn>
-        <v-btn depressed>
-          5
-        </v-btn>
-        <v-btn depressed>
-          6
-        </v-btn>
-      </div>
-      <div>
-        <v-btn depressed>
-          1
-        </v-btn>
-        <v-btn depressed>
-          2
-        </v-btn>
-        <v-btn depressed>
-          3
+      <div
+        v-for="row in 3"
+        :key="row"
+      >
+        <v-btn
+          v-for="column in 3"
+          :key="row + column"
+          depressed
+        >
+          {{ 3 * (3-row) + column }}
         </v-btn>
       </div>
     </div>
-
-
   </div>
 </template>
 
 <script>
-
 export default {
 
 }
