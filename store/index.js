@@ -7,7 +7,6 @@ import * as actions from './actions';
 
 Vue.use(Vuex);
 
-
 const state = {
   calculator: {
     resultValue: 0,

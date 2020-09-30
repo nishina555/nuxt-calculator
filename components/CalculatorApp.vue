@@ -2,7 +2,7 @@
   <div class="calculator__container">
     <v-text-field
       class="calculator__result"
-      :value="resultValue"
+      :value="displayValue"
       label="Solo"
       solo
       readonly
@@ -125,10 +125,14 @@
 <script>
 export default {
   props: {
-    resultValue: {
+    // calculator: {
+    //   type: Object,
+    //   require : true,
+    // },
+    displayValue: {
       type: Number,
       required: true
-    },
+    }
   },
 }
 </script>

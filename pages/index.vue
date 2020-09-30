@@ -4,7 +4,7 @@
       <div class="text-center">
         <h1>Nuxt Calculator</h1>
         <calculator-app
-          :resultValue = "calculator.resultValue"
+          :displayValue = "displayValue"
         />
       </div>
     </v-col>
@@ -21,7 +21,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'calculator'
+      'calculator',
+      'displayValue'
     ]),
   }
 }
