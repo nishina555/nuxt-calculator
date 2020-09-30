@@ -32,7 +32,7 @@
             outlined
             tile
           >
-            x
+            C
           </v-btn>
         </v-col>
       </v-row>
@@ -94,7 +94,7 @@
       </v-row>
       <v-row no-gutters>
         <v-col
-          :cols="6"
+          :cols="9"
         >
           <v-btn
             depressed
@@ -103,18 +103,6 @@
             tile
           >
             0
-          </v-btn>
-        </v-col>
-        <v-col
-          :cols="3"
-        >
-          <v-btn
-            depressed
-            block
-            outlined
-            tile
-          >
-            C
           </v-btn>
         </v-col>
         <v-col
