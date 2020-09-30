@@ -1,3 +1,3 @@
-// export const addTodo = ({ commit }, payload) => {
-//   commit('addTodo', payload)
-// };
+export const updateInputValue = ({ commit }, number) => {
+  commit('updateInputValue', { number: number })
+};

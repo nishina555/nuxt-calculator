@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import CalculatorApp from '~/components/CalculatorApp.vue'
 
 export default {
@@ -27,8 +27,11 @@ export default {
     ]),
   },
   methods: {
+    ...mapActions([
+      'updateInputValue'
+    ]),
     handleNumberClick(number) {
-      // console.log(number)
+      this.updateInputValue(number)
     }
   }
 }

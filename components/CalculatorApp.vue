@@ -140,7 +140,6 @@ export default {
   },
   methods: {
     handleNumberClick(number) {
-      // console.log(number)
       this.$emit("numberClick", number)
     }
   }

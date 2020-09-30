@@ -1,3 +1,3 @@
-// export const addTodo = (state, todo) => {
-//   state.todos.push(todo)
-// };
+export const updateInputValue = (state, payload) => {
+  state.calculator.inputValue = state.calculator.inputValue * 10 + payload.number
+}
