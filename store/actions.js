@@ -5,3 +5,11 @@ export const updateInputValue = ({ commit }, number) => {
 export const clearValue = ({ commit }) => {
   commit('clearValue')
 };
+
+export const showResult = ({ commit }) => {
+  commit('showResult')
+};
+
+export const showInput = ({ commit }) => {
+  commit('showInput')
+};

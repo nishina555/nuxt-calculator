@@ -7,6 +7,7 @@
           :displayValue = "displayValue"
           @numberClick = "handleNumberClick"
           @clearClick = "handleClearClick"
+          @equalClick = "handleEqualClick"
         />
       </div>
     </v-col>
@@ -30,12 +31,21 @@ export default {
   methods: {
     ...mapActions([
       'updateInputValue',
-      'clearValue'
+      'clearValue',
+      'showResult',
+      'showInput'
     ]),
     handleNumberClick(number) {
+      if (this.calculator.showResult) {
+        this.showInput()
+      }
       this.updateInputValue(number)
     },
     handleClearClick() {
+      this.clearValue()
+    },
+    handleEqualClick() {
+      this.showResult()
       this.clearValue()
     }
   }

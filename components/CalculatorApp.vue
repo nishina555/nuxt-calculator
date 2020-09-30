@@ -118,6 +118,7 @@
             block
             outlined
             tile
+            @click = "handleEqualClick"
           >
             =
           </v-btn>
@@ -145,6 +146,9 @@ export default {
     },
     handleClearClick() {
       this.$emit("clearClick")
+    },
+    handleEqualClick() {
+      this.$emit("equalClick")
     }
   }
 }
