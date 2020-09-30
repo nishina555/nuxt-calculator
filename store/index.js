@@ -9,8 +9,11 @@ Vue.use(Vuex);
 
 
 const state = {
-  resultValue: 0,
-  inputValue: 0
+  calculator: {
+    resultValue: 0,
+    inputValue: 0,
+    showResult: true
+  }
 }
 
 const store = () => new Vuex.Store({

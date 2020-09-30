@@ -1,5 +1,6 @@
-export const resultValue = state => state.resultValue;
-export const inputValue = state => state.inputValue;
+// export const resultValue = state => state.resultValue;
+// export const inputValue = state => state.inputValue;
+export const calculator = state => state.calculator;
 
 // export const incompletedTodos = state =>state.todos.filter(todo => !todo.is_completed);
 
