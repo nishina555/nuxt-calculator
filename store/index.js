@@ -9,7 +9,8 @@ Vue.use(Vuex);
 
 
 const state = {
-
+  resultValue: 0,
+  inputValue: 0
 }
 
 const store = () => new Vuex.Store({
