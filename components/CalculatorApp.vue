@@ -62,6 +62,7 @@
             block
             outlined
             tile
+            @click = "handleOperatorClick('minus')"
           >
             -
           </v-btn>
@@ -91,6 +92,7 @@
             block
             outlined
             tile
+            @click = "handleOperatorClick('plus')"
           >
             +
           </v-btn>
@@ -149,6 +151,9 @@ export default {
     },
     handleEqualClick() {
       this.$emit("equalClick")
+    },
+    handleOperatorClick(operator) {
+      this.$emit("operatorClick", operator)
     }
   }
 }

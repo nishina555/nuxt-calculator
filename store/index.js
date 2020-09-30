@@ -11,6 +11,7 @@ const state = {
   calculator: {
     resultValue: 0,
     inputValue: 0,
+    operator: "plus",
     showResult: false
   }
 }

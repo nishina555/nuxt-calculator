@@ -1,9 +1,15 @@
 export const updateInputValue = ({ commit }, number) => {
-  commit('updateInputValue', { number: number })
+  // { number } は {number: number}の略
+  // payloadを利用しているため、Objectを引数にしている
+  commit('updateInputValue', { number })
 };
 
-export const clearValue = ({ commit }) => {
-  commit('clearValue')
+export const clearResultValue = ({ commit }) => {
+  commit('clearResultValue')
+};
+
+export const clearInputValue = ({ commit }) => {
+  commit('clearInputValue')
 };
 
 export const showResult = ({ commit }) => {
@@ -12,4 +18,12 @@ export const showResult = ({ commit }) => {
 
 export const showInput = ({ commit }) => {
   commit('showInput')
+};
+
+export const calculate = ({ commit }) => {
+  commit('calculate')
+};
+
+export const updateOperator = ({ commit }, operator) => {
+  commit('updateOperator', { operator })
 };

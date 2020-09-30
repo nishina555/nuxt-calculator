@@ -8,6 +8,7 @@
           @numberClick = "handleNumberClick"
           @clearClick = "handleClearClick"
           @equalClick = "handleEqualClick"
+          @operatorClick = "handleOperatorClick"
         />
       </div>
     </v-col>
@@ -31,9 +32,12 @@ export default {
   methods: {
     ...mapActions([
       'updateInputValue',
-      'clearValue',
+      'clearResultValue',
+      'clearInputValue',
       'showResult',
-      'showInput'
+      'showInput',
+      'calculate',
+      'updateOperator',
     ]),
     handleNumberClick(number) {
       if (this.calculator.showResult) {
@@ -42,11 +46,21 @@ export default {
       this.updateInputValue(number)
     },
     handleClearClick() {
-      this.clearValue()
+      this.clearResultValue()
+      this.clearInputValue()
     },
     handleEqualClick() {
+      this.calculate()
       this.showResult()
-      this.clearValue()
+      // resultをclearにするタイミングを考える
+      this.clearResultValue()
+      this.clearInputValue()
+    },
+    handleOperatorClick(operator) {
+      this.calculate()
+      this.updateOperator(operator)
+      this.clearInputValue()
+      this.showResult()
     }
   }
 }
