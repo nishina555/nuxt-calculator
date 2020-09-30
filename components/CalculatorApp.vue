@@ -32,6 +32,7 @@
             block
             outlined
             tile
+            @click = "handleClearClick"
           >
             C
           </v-btn>
@@ -141,6 +142,9 @@ export default {
   methods: {
     handleNumberClick(number) {
       this.$emit("numberClick", number)
+    },
+    handleClearClick() {
+      this.$emit("clearClick")
     }
   }
 }

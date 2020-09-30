@@ -6,6 +6,7 @@
         <calculator-app
           :displayValue = "displayValue"
           @numberClick = "handleNumberClick"
+          @clearClick = "handleClearClick"
         />
       </div>
     </v-col>
@@ -28,10 +29,14 @@ export default {
   },
   methods: {
     ...mapActions([
-      'updateInputValue'
+      'updateInputValue',
+      'clearValue'
     ]),
     handleNumberClick(number) {
       this.updateInputValue(number)
+    },
+    handleClearClick() {
+      this.clearValue()
     }
   }
 }
