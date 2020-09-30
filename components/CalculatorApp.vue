@@ -19,6 +19,7 @@
             block
             outlined
             tile
+            @click = "handleNumberClick(n + 6)"
           >
             {{ n + 6 }}
           </v-btn>
@@ -47,6 +48,7 @@
             block
             outlined
             tile
+            @click = "handleNumberClick(n + 3)"
           >
             {{ n + 3 }}
           </v-btn>
@@ -69,6 +71,7 @@
           v-for="n in 3"
           :key="n"
           :cols="3"
+          @click = "handleNumberClick(n)"
         >
           <v-btn
             depressed
@@ -101,6 +104,7 @@
             block
             outlined
             tile
+            @click = "handleNumberClick(0)"
           >
             0
           </v-btn>
@@ -134,6 +138,12 @@ export default {
       required: true
     }
   },
+  methods: {
+    handleNumberClick(number) {
+      // console.log(number)
+      this.$emit("numberClick", number)
+    }
+  }
 }
 </script>
 

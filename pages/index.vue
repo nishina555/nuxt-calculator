@@ -5,6 +5,7 @@
         <h1>Nuxt Calculator</h1>
         <calculator-app
           :displayValue = "displayValue"
+          @numberClick = "handleNumberClick"
         />
       </div>
     </v-col>
@@ -24,6 +25,11 @@ export default {
       'calculator',
       'displayValue'
     ]),
+  },
+  methods: {
+    handleNumberClick(number) {
+      // console.log(number)
+    }
   }
 }
 </script>
