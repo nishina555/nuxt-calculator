@@ -9,7 +9,7 @@ let calculator = {
 
 const state = { calculator }
 
-describe("calculator",() => {
+describe("calculator", () => {
   it("show calculator", ()=> {
     calculator = getters.calculator(state)
     expect(calculator).toEqual(state.calculator)
