@@ -27,3 +27,7 @@ export const calculate = ({ commit }) => {
 export const updateOperator = ({ commit }, operator) => {
   commit('updateOperator', { operator })
 };
+
+export const clearOperator = ({ commit }) => {
+  commit('clearOperator')
+};

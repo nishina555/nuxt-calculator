@@ -38,6 +38,7 @@ export default {
       'showInput',
       'calculate',
       'updateOperator',
+      'clearOperator'
     ]),
     handleNumberClick(number) {
       if (this.calculator.showResult) {
@@ -48,6 +49,7 @@ export default {
     handleClearClick() {
       this.clearResultValue()
       this.clearInputValue()
+      this.clearOperator()
     },
     handleEqualClick() {
       this.calculate()

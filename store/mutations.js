@@ -23,9 +23,15 @@ export const calculate = (state) => {
     state.calculator.resultValue += state.calculator.inputValue
   } else if (state.calculator.operator === "minus") {
     state.calculator.resultValue -= state.calculator.inputValue
+  } else {
+    state.calculator.resultValue = state.calculator.inputValue
   }
 }
 
 export const updateOperator = (state, payload) => {
   state.calculator.operator = payload.operator
+}
+
+export const clearOperator = (state) => {
+  state.calculator.operator = ""
 }
