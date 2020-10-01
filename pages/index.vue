@@ -52,8 +52,6 @@ export default {
     handleEqualClick() {
       this.calculate()
       this.showResult()
-      // resultをclearにするタイミングを考える
-      this.clearResultValue()
       this.clearInputValue()
     },
     handleOperatorClick(operator) {
