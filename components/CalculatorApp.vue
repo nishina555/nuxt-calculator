@@ -133,10 +133,6 @@
 <script>
 export default {
   props: {
-    // calculator: {
-    //   type: Object,
-    //   require : true,
-    // },
     displayValue: {
       type: Number,
       required: true
@@ -160,21 +156,10 @@ export default {
 </script>
 
 <style scoped>
-.calculator__container {
-  /* background: yellow; */
-}
-
-.calculator__result {
-  /* background: yellowgreen; */
-}
-
 .calculator__result >>> input {
   text-align: right;
-  /* background: blueviolet; */
 }
-
 .calculator__button {
-  /* background: blue; */
   margin: 0 auto;
   width: 200px;
 }
