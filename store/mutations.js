@@ -19,7 +19,7 @@ export const showInput = (state) => {
 }
 
 export const calculate = (state) => {
-  if(state.calculator.operator === "plus") {
+  if (state.calculator.operator === "plus") {
     state.calculator.resultValue += state.calculator.inputValue
   } else if (state.calculator.operator === "minus") {
     state.calculator.resultValue -= state.calculator.inputValue
